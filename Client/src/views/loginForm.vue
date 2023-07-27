@@ -1,17 +1,16 @@
 <template>
-    <div>
-        <form>
-    <!--username-->
-    <label>Username</label>
-    <input id="username" placeholder="xX123Gamer123Xx" type="text">
-    <!--password-->
-    <label>Password</label>
-    <input id="password" placeholder="********" type ="password">
-    <!--button-->
-    <input id ="submit" placeholder="Connection" type ="submit">
-    
+  <div>
+    <form>
+      <!--username-->
+      <label>Username</label>
+      <input id="username" placeholder="xX123Gamer123Xx" type="text" />
+      <!--password-->
+      <label>Password</label>
+      <input id="password" placeholder="********" type="password" />
+      <!--button-->
+      <input id="submit" placeholder="Connection" type="submit" />
     </form>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -20,6 +19,4 @@ export default {
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
