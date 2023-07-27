@@ -1,14 +1,14 @@
 <template>
-  <loginForm />
+  <LoginForm />
 </template>
 
 <script>
-import loginForm from "./views/loginForm.vue";
+import LoginForm from "./views/LoginForm.vue";
 
 export default {
   name: "App",
   components: {
-    loginForm,
+    LoginForm,
   },
 };
 </script>
