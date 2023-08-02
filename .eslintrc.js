@@ -15,7 +15,8 @@ module.exports = {
   },
   settings: {
     ...createAliasSetting({
-      '@': `${path.resolve(__dirname, './Client/src/*')}`
+      '@': `${path.resolve(__dirname, './Client/src/*')}`,
+      '@app': `${path.resolve(__dirname, './Server/app/*')}`,
     })
   }
 }
