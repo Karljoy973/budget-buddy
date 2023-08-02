@@ -1,6 +1,11 @@
 const express = require('express'); 
-const user_api = express.Router();
+const user = express.Router();
+const controller = require('../../controller/index')
 
 //crud
-user_api.get('/user/:id', (req,res, next));
-user_api.put('/user/:id', (req, res, next));
+user.get('/user/:id', controller.get);
+user.put('/user', controller.put);
+
+
+
+module.exports = user;
