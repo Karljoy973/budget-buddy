@@ -1,34 +1,16 @@
-const uuid = require("uuid").v4;
-const { pool } = require("../index").pool;
+const { pool } = require("../index");
+const { insert_user } = require('../../controller/index')
 
-const post = async (data) => {
-  const query = `INSERT INTO sys.user
-        (
-            _id, 
-            _name, 
-            _family_name, 
-            _password, 
-            _email, 
-            _phone_number
-            ) 
-        VALUES (
-            ${parseInt(uuid())}, 
-            ${data._name.toString()}, 
-            ${data._family_name.toString()}, 
-            ${data._password.toString()}, 
-            ${parseInt(data._email)}, 
-            ${data._phone.toString()}
-            );`;
-
+const post_user = async () => {
   pool
     .getConnection()
     .then((connexion) => {
-      connexion.query(query);
+      connexion.query(insert_user);
     })
     .catch((e) => res.send(400).json({ msg: new Error(e) }))
     .release();
 };
 
 module.exports = {
-  post,
+  post_user,
 };
