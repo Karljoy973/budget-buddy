@@ -1,7 +1,5 @@
-const connexion = require('./connexion');
-const credentials = require('./credentials');
+const pool = require("./connexion");
 
 module.exports = {
-    connexion,
-    credentials,
-}
+  pool,
+};

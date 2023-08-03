@@ -1,5 +1,7 @@
-const user = require('./user');
+const user = require("./user");
 
-export const api = {
-    user,
-}
+const api = {
+  user,
+};
+
+module.exports = api;

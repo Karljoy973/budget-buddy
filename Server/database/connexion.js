@@ -1,8 +1,7 @@
 const mysql = require("mysql");
-const { credentials } = require('./index');
+const credentials = require("./credentials");
 
-console.log(credentials.host)
-const connexion = mysql.createConnection({
+const pool = mysql.createPool({
   host: credentials.host,
   user: credentials.user,
   password: credentials.password,
@@ -10,4 +9,4 @@ const connexion = mysql.createConnection({
   port: credentials.PORT,
 });
 
-module.exports = connexion;
+module.exports = pool;
