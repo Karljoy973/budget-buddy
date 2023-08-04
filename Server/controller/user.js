@@ -17,7 +17,8 @@ const insert_user = (req, res) => {
             ${data._password.toString()}, 
             ${parseInt(data._email)}, 
             ${data._phone.toString()}
-            );`};
+            );`;
+};
 
 module.exports = {
   insert_user,
