@@ -1,15 +1,7 @@
 const app = require("./app/index");
-const { pool } = require("./database/index");
-
 require("dotenv").config();
 
 const SV_PORT = process.env.SV_PORT;
-const DB_PORT = process.env.DB_PORT;
-
-pool.getConnection((error) => {
-  if (error) console.warn(error);
-  else console.log(`Database Connection Setup on port ${DB_PORT}`);
-});
 
 app.listen(SV_PORT, () =>
   console.log(
