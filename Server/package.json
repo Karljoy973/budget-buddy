@@ -15,9 +15,22 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "module-alias": "^2.2.3",
     "moment": "^2.29.4",
     "mysql": "^2.18.1",
     "nodemon": "^3.0.1",
     "prettier": "^3.0.0"
+  },
+  "_moduleAliases": {
+    "@root"      : ".",
+    "@app"      : "app",
+    "@ctrls" : "controller",
+    "@db"  : "database",
+    "@dbRead"  : "database/read",
+    "@dbWrite"  : "database/write",
+    "@doc": "doc",
+    "@log": "log",
+    "@mid": "middleware",
+    "@api": "routes/api"
   }
 }

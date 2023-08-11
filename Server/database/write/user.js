@@ -1,7 +1,7 @@
-const { pool } = require("../connexion");
-const { insert_user } = require("../../controller/index");
+const { pool } = require("@db/connection");
+const { insert_user } = require("@ctrls/index");
 
 
 module.exports = {
-  post_user,
+  // post_user,
 };

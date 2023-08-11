@@ -1,4 +1,5 @@
-const app = require("./app/index");
+require('module-alias/register')
+const app = require("@app/index");
 require("dotenv").config();
 
 const SV_PORT = process.env.SV_PORT;

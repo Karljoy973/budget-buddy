@@ -1,6 +1,6 @@
 const express = require("express");
-const logger = require("../log/index");
-const api = require("../routes/api/index");
+const logger = require("@log/index");
+const api = require("@api/index");
 var bodyParser = require("body-parser");
 const app = express();
 
