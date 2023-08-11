@@ -1,4 +1,4 @@
-require('module-alias/register')
+require("module-alias/register");
 const app = require("@app/index");
 require("dotenv").config();
 

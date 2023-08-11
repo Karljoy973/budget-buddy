@@ -9,5 +9,4 @@ const pool = mysql.createPool({
   port: credentials.PORT,
 });
 
-
 module.exports = pool;
