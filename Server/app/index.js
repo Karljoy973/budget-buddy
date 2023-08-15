@@ -15,7 +15,10 @@ app.use(bodyParser.json());
 // ** end of middleware 1 section
 
 // ** route handler
-app.use("/user", api.user);
+app.use("/user", api.user.get);
+app.use("/user", api.user.post);
+app.use("/user", api.user.put);
+app.use("/user", api.user.delete);
 
 // ** end of route handler
 
