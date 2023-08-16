@@ -1,6 +1,5 @@
 const express = require("express");
-const errorLogger = require('../log/winston/ErrorLogger')
-const logger = require('../log/winston/logger')
+const logger = require('../log/winston/index')
 var bodyParser = require("body-parser");
 const app = express();
 
@@ -13,7 +12,7 @@ app.use(bodyParser.json());
 //include logger
 
 
-app.use(logger);
+app.use(logger.info);
 
 // ** end of middleware 1 section
 
@@ -27,7 +26,7 @@ app.get('/', (req, res)=>{
 // ** end of route handler
 
 // ** middleware 2 section
-app.use(errorLogger)
+app.use(logger.error)
 // ** end of middleware 2 section
 
 module.exports = app;
