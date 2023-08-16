@@ -15,11 +15,13 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "express-winston": "^4.2.0",
     "module-alias": "^2.2.3",
     "moment": "^2.29.4",
     "mysql": "^2.18.1",
     "nodemon": "^3.0.1",
     "prettier": "^3.0.0",
+    "winston": "^3.10.0",
     "yup": "^1.2.0"
   },
   "_moduleAliases": {
@@ -30,7 +32,7 @@
     "@dbRead": "database/read",
     "@dbWrite": "database/write",
     "@doc": "doc",
-    "@log": "log",
+    "@log": "./log",
     "@mid": "middleware",
     "@api": "routes/api"
   }

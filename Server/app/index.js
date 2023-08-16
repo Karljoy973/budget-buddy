@@ -1,29 +1,34 @@
 const express = require("express");
-const logger = require("@log/index");
-const api = require("@api/index");
+const errorLogger = require('../log/winston/ErrorLogger')
+const logger = require('../log/winston/logger')
 var bodyParser = require("body-parser");
 const app = express();
 
 // ** midlleware1 section
-app.use(logger);
 
 //To parse URL encoded data
 app.use(bodyParser.urlencoded({ extended: false }));
 //To parse json data
 app.use(bodyParser.json());
+//include logger
+
+
+app.use(logger);
 
 // ** end of middleware 1 section
 
 // ** route handler
-app.use("/user", api.user.get);
-app.use("/user", api.user.post);
-app.use("/user", api.user.put);
-app.use("/user", api.user.delete);
+app.get('/', (req, res)=>{
+    res
+    .status(400)
+    .json({message : "Request", code : 200})
+})
 
 // ** end of route handler
 
 // ** middleware 2 section
-
+app.use(errorLogger)
 // ** end of middleware 2 section
 
 module.exports = app;
+;
